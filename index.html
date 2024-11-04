@@ -1,13 +1,79 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css">
-    <title>Registration Form</title>
-  </head>
-  <body>
-    <div id="app">Hello World</div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./index.css">
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <h1>Registration Form</h1>
+      <form action="/submit" method="POST">
+        <!-- First Name -->
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <!-- Last Name -->
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <!-- Email Address -->
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+
+        <!-- Confirm Password -->
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" minlength="8" required>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <!-- Gender -->
+        <fieldset>
+          <legend>Gender:</legend>
+          <label>
+            <input type="radio" name="gender" value="male" required> Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female"> Female
+          </label>
+          <label>
+            <input type="radio" name="gender" value="other"> Other
+          </label>
+        </fieldset>
+
+        <!-- About Me -->
+        <label for="about-me">About Me:</label>
+        <textarea id="about-me" name="about-me" rows="4" cols="50" placeholder="Tell us about yourself"></textarea>
+
+        <!-- Choose Your Profession -->
+        <label for="profession">Choose Your Profession:</label>
+        <select id="profession" name="profession" required>
+          <option value="">Select your profession</option>
+          <option value="web-development">Web Development</option>
+          <option value="data-analytics">Data Analytics</option>
+          <option value="ui-ux-design">UI/UX Design</option>
+          <option value="software-engineering">Software Engineering</option>
+          <option value="product-management">Product Management</option>
+        </select>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+      </form>
+
+    </div>
+    <img src="./assets/registration.png" alt="registration picture">
+  </main>
+</body>
+
 </html>
